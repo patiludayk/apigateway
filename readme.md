@@ -5,8 +5,7 @@
 2. [x] **_Microservice Communication using Feign Client_**
 
 ## Steps to run
-                    no specific order to run any service
-                    good to be run as below below order
+![plot](src/main/resources/note.svg)
 
 1. Start apigateway service
 2. start demo service
