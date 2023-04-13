@@ -1,0 +1,16 @@
+server:
+  port: 8082
+  #port: 0     #let springboot choose random port to run on
+
+spring:
+  application:
+    name: service1
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
+    #name   #this is from feign client for DemoServiceClient (${feign.name})

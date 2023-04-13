@@ -13,7 +13,7 @@ public class ApiGatewayConfig {
         return builder.routes()
                 .route("id1", r -> r.host("**.localhost:8080")
                         .and()
-                        .path("/service")
+                        .path("/demo", "/com")  //this requestmapping must be available as is at below uri in this case http://localhost:8081
                         .uri("http://localhost:8081"))  //service host URI
                 .route("id2", r -> r.host("**.localhost:8080")
                         .and()
@@ -27,7 +27,7 @@ public class ApiGatewayConfig {
     @Bean
     public RouteLocator anotherCustomRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("id1", r -> r.host("**.localhost:8080")
+                .route("id3", r -> r.host("**.localhost:8080")
                         .and()
                         .path("/service2")
                         .uri("http://localhost:8083"))  //service host URI
